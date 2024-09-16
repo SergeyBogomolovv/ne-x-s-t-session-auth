@@ -1,9 +1,11 @@
-import { Button } from "@/shared/ui/button";
+import Link from "next/link";
 
 export default function Page() {
   return (
     <div>
-      <Button data-testid="btn">Click me, im button</Button>
+      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <Link href="/login">Login</Link>
+      <Link href="/profile">Profile</Link>
     </div>
   );
 }
