@@ -22,7 +22,7 @@ export class AuthController {
     return this.setCookie(res, session).json({ message });
   }
 
-  @Get('logout')
+  @Post('logout')
   logout(@Res() res: Response) {
     return res.clearCookie('session').json('ok');
   }
