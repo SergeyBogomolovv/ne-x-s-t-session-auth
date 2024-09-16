@@ -7,13 +7,13 @@ export default function RegisterPage() {
       <div className="flex items-center justify-center py-12">
         <RegisterForm />
       </div>
-      <div className="hidden bg-muted lg:block">
+      <div className="hidden bg-muted lg:flex items-center justify-center">
         <Image
-          src="/placeholder.svg"
+          src={"/register.svg"}
           alt="Image"
-          width="1920"
-          height="1080"
-          className="h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
+          width="600"
+          height="600"
+          className="dark:brightness-[0.2] dark:grayscale"
         />
       </div>
     </div>

@@ -18,8 +18,10 @@ import { toast } from "sonner";
 import FormError from "@/shared/ui/form-error";
 import { RegisterFields, Registerschema } from "../model/register.schema";
 import { register } from "../api/register";
+import { useRouter } from "next/navigation";
 
 export default function RegisterForm() {
+  const router = useRouter();
   const form = useForm<RegisterFields>({
     resolver: zodResolver(Registerschema),
     defaultValues: { email: "", password: "", name: "" },
@@ -35,6 +37,7 @@ export default function RegisterForm() {
     },
     onSuccess(message) {
       toast.success(message);
+      router.push("/profile");
     },
   });
 

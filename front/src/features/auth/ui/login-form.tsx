@@ -18,8 +18,11 @@ import { useMutation } from "@tanstack/react-query";
 import { login } from "../api/login";
 import { toast } from "sonner";
 import FormError from "@/shared/ui/form-error";
+import { useRouter } from "next/navigation";
 
 export default function LoginForm() {
+  const router = useRouter();
+
   const form = useForm<LoginFields>({
     resolver: zodResolver(Loginschema),
     defaultValues: { email: "", password: "" },
@@ -35,6 +38,7 @@ export default function LoginForm() {
     },
     onSuccess(message) {
       toast.success(message);
+      router.push("/profile");
     },
   });
 

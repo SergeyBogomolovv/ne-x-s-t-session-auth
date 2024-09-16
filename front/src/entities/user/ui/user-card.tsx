@@ -17,11 +17,11 @@ export default function UserCard({ user }: Props) {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>{user.name}</CardTitle>
-        <CardTitle>{user.email}</CardTitle>
+        <CardTitle>Name: {user.name}</CardTitle>
       </CardHeader>
       <CardContent>
-        <CardDescription>{user.id}</CardDescription>
+        <CardDescription>Email: {user.email}</CardDescription>
+        <CardDescription>ID: {user.id}</CardDescription>
       </CardContent>
       <CardFooter>
         <LogoutButton>Logout</LogoutButton>

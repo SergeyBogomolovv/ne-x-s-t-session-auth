@@ -1,3 +1,9 @@
+import { UserSkeletonCard } from "@/entities/user";
+
 export default function LoadingProfilePage() {
-  return <div>LoadingProfilePage</div>;
+  return (
+    <section className="flex-1 flex items-center justify-center">
+      <UserSkeletonCard />
+    </section>
+  );
 }
