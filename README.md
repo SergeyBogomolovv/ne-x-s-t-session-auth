@@ -1,3 +1,6 @@
-# Next + Nest modern cookie jwt auth
+# Next + Nest jwt-session auth
 
-Here i am implementing auth with next.js server components and middleware with jwt tokens
+## Features
+- Login and Register
+- Session cookie auth
+- Next.js server middleware auth check
