@@ -29,7 +29,7 @@ export class AuthController {
 
   @UseGuards(JwtAuthGuard)
   @Get('refresh')
-  async refresh(@CurrentUser('id') id: string, @Res() res: Response) {
+  async refresh(@CurrentUser('sub') id: string, @Res() res: Response) {
     const session = await this.authService.refresh(id);
     return this.setCookie(res, session).json('ok');
   }

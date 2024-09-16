@@ -1,6 +1,8 @@
+import { User } from 'src/users/entities/user.entity';
+
 export class JwtUserPayload {
-  constructor(payload: JwtUserPayload) {
-    this.id = payload.id;
+  constructor(payload: User) {
+    this.sub = payload.id;
   }
-  id: string;
+  sub: string;
 }
